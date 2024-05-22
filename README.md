@@ -102,7 +102,9 @@ sudo systemctl start minecraft.service
   ```
   command to check for any errors and then go back over the tutorial to see if any steps were completed incorrectly.
 
+## Acknowledgments
 
+This tutorial was based on the article "Setting up a Minecraft Java server on Amazon EC2"(https://aws.amazon.com/ko/blogs/gametech/setting-up-a-minecraft-java-server-on-amazon-ec2/) by Mitul Ganger and Caleb Grode
 
 
 
