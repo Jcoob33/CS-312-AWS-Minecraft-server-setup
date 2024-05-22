@@ -10,16 +10,23 @@
 ## Instance Setup
 
 1. At the top of the page you will see a section called “Name and tags”, in that section enter the name that you want the instance     to go by.
+  
 2. The section directly below that one is called “Application and OS images”. For this part you are going to choose Amazon Linux as    the AMI. Make sure that the Amazon Linux box is highlighted and the box below shows “Amazon Linux 2023 AMI” and the following       box named “Architecture” is set to “64-bit(Arm)”.
+  
 3. The following section is called “Instance type”, you are going to want to change the instance type to make sure that it is set      to “t4g.small”.
+  
 4. Scroll down to the “Key pair (login)” section where you will need to select “create new key pair” which can be found to the         right of the section. You can name it anything and once you finish it will automatically download to your local machine for         later use.
+
 5. Scroll down until you see the “Network settings” section, in the top right you need to click edit which will allow you to make      the necessary changes.
    - Make sure that the VPC section at the top is set to the default VPC, this is indicated by the “(default)” tag that can be seen      to the right of the box you choose the VPC in.
    - The next two sections are “Subnet” which can be set to no preference and “Auto-assign public IP” which needs to be enabled.
+
 6. In the “Firewall (security group)” section, click the “Create security group” box. You are given the option to change the name      and also leave a brief description.
+
 7. Add two inbound rules that will allow connectivity:
    - Rule 1: Leave “Type”, “Protocol”, and “Port Range” as is. Change the “Source type” to “Anywhere”. Add a description if desired.
    - Rule 2: Click the “Add security group rule” at the bottom left side of the section. Set “Type” to Custom TCP, “Protocol” to       TCP, “Port Range” to 25565, and “Source type” to “Anywhere”. Leave a brief description indicating it allows Minecraft               connections.
+
 8. Finally Scroll down to the “Configure storage” section where you are going to select 8GB for root volume EBS. Then launch the instance.
 
 ## Connect to Your EC2 Instance
