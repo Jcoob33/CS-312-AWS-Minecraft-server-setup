@@ -27,3 +27,7 @@ Once on the home page you will see a large orange button that says launch instan
    
    ```bash
    ssh -i /path/to/key/your-key.pem ec2-user@public-ip
+   ```
+   You are going to want to change the path to the correct one to access your key file and make sure you change the key file name to the correct one. After that go to you ec2 instances which can be reached via the “Instance” section on the side option on the ec2 page. Click on it can then click on the minecraft server instance. In the top middle of the page you will find the public ip which will be put at the end of the ssh command.
+
+
