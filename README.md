@@ -37,7 +37,7 @@ Once on the home page you will see a large orange button that says launch instan
    ```
 3. Now that the file is made we now need to use a text editor to add the information that will allow the script to work. You are        going to enter
    ```bash
-   “vim setup-minecraft.sh”
+   vim setup-minecraft.sh
    ```
    Note that you don't have to use vim and instead use anyone you feel comfortable with.
    
@@ -89,16 +89,16 @@ sudo systemctl start minecraft.service
 ```
 5.After that you want to change the permissions to make the “setup-minecraft.sh” file we made executable. This can be done with the   following command... 
   ```bash 
-  “chmod +x setup_minecraft.sh”.
+  chmod +x setup_minecraft.sh.
   ```
 6.Now that the file is executable we can now run it using...
   ```bash
-  “sudo ./setup-minecraft.sh”
+  sudo ./setup-minecraft.sh
   ```
   Once its ran you should see all the items in the script being download and once finish you should have access to the terminal 
   again. If you don't have access to the terminal due to the script not finishing something went wrong. Use the...
   ```bash
-  “sudo systemctl status minecraft.service”
+  sudo systemctl status minecraft.service
   ```
   command to check for any errors and then go back over the tutorial to see if any steps were completed incorrectly.
 
