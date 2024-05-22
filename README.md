@@ -29,7 +29,7 @@
 
 8. Finally Scroll down to the “Configure storage” section where you are going to select 8GB for root volume EBS. Then launch the instance.
 
-## Connect to Your EC2 Instance
+## Connect to Your EC2 Instance/Run Server
 
 1. Open a terminal on your local machine and SSH into the EC2 instance:
    
