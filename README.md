@@ -44,7 +44,7 @@
    ```bash
    touch setup-minecraft.sh
    ```
-3. Now that the file is made we now need to use a text editor to add the information that will allow the script to work. You are       going to enter
+3. Now that the file is made we now need to use a text editor to add the information that will allow the script to work. You are       going to enter:
    ```bash
    vim setup-minecraft.sh
    ```
@@ -97,16 +97,16 @@ sudo systemctl start minecraft.service
 # End script
 ```
 5. After that you want to change the permissions to make the “setup-minecraft.sh” file we made executable. This can be done with 
-   thefollowing command... 
+   thefollowing command: 
    ```bash 
    chmod +x setup_minecraft.sh.
    ```
-6. Now that the file is executable we can now run it using...
+6. Now that the file is executable we can now run it using:
    ```bash
    sudo ./setup-minecraft.sh
    ```
    Once its ran you should see all the items in the script being download and once finish you should have access to the terminal 
-   again. If you don't have access to the terminal due to the script not finishing something went wrong. Use the...
+   again. If you don't have access to the terminal due to the script not finishing something went wrong. Use the:
    ```bash
    sudo systemctl status minecraft.service
    ```
