@@ -92,14 +92,15 @@ sudo systemctl start minecraft.service
   “chmod +x setup_minecraft.sh”.
   ```
 6.Now that the file is executable we can now run it using...
-```bash
-“sudo ./setup-minecraft.sh”
-```
-Once its ran you should see all the items in the script being download and once finish you should have access to the terminal again. If you don't have access to the terminal due to the script not finishing something went wrong. Use the...
-```bash
-“sudo systemctl status minecraft.service”
-```
-command to check for any errors and then go back over the tutorial to see if any steps were completed incorrectly.
+  ```bash
+  “sudo ./setup-minecraft.sh”
+  ```
+  Once its ran you should see all the items in the script being download and once finish you should have access to the terminal 
+  again. If you don't have access to the terminal due to the script not finishing something went wrong. Use the...
+  ```bash
+  “sudo systemctl status minecraft.service”
+  ```
+  command to check for any errors and then go back over the tutorial to see if any steps were completed incorrectly.
 
 
 
