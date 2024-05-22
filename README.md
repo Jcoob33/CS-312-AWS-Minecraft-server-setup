@@ -32,12 +32,62 @@ Once on the home page you will see a large orange button that says launch instan
 2. After this, we are going to be running a script to handle the setup of the server itself. To start, we are going to make a file 
    called `setup-minecraft.sh` which can be done with the following command:
 
-```bash
-touch setup-minecraft.sh
-```
-3. Now that the file is made we now need to use a text editor to add the information that will allow the script to work. You are        going to enter ```bash
-   “vim setup-minecraft.sh” ```
+   ```bash
+   touch setup-minecraft.sh
+   ```
+3. Now that the file is made we now need to use a text editor to add the information that will allow the script to work. You are        going to enter
+   ```bash
+   “vim setup-minecraft.sh”
+   ```
    Note that you don't have to use vim and instead use anyone you feel comfortable with.
+   
+4. You are now going to add the script shown below with one change. You need to and the link to the .jar file that will allow the       server to work. This can be found at this website “​​https://mcversions.net/download/1.20.1”. Add that to the part of the script       where you see “MINECRAFTSERVERURL=”. Make sure that there is no space between the “=” sign and the url you copied in.
+```bash
+   #!/bin/bash
+
+# *** INSERT SERVER DOWNLOAD URL BELOW ***
+# Do not add any spaces between your link and the "=", otherwise it won't work. EG: MINECRAFTSERVERURL=https://urlexample
+
+
+MINECRAFTSERVERURL=
+
+
+# Download Java
+sudo yum install -y java-17-amazon-corretto-headless
+# Install MC Java server in a directory we create
+adduser minecraft
+mkdir /opt/minecraft/
+mkdir /opt/minecraft/server/
+cd /opt/minecraft/server
+
+# Download server jar file from Minecraft official website
+wget $MINECRAFTSERVERURL
+
+# Generate Minecraft server files and create script
+chown -R minecraft:minecraft /opt/minecraft/
+java -Xmx1300M -Xms1300M -jar server.jar nogui
+sleep 40
+sed -i 's/false/true/p' eula.txt
+touch start
+printf '#!/bin/bash\njava -Xmx1300M -Xms1300M -jar server.jar nogui\n' >> start
+chmod +x start
+sleep 1
+touch stop
+printf '#!/bin/bash\nkill -9 $(ps -ef | pgrep -f "java")' >> stop
+chmod +x stop
+sleep 1
+
+# Create SystemD Script to run Minecraft server jar on reboot
+cd /etc/systemd/system/
+touch minecraft.service
+printf '[Unit]\nDescription=Minecraft Server on start up\nWants=network-online.target\n[Service]\nUser=minecraft\nWorkingDirectory=/opt/minecraft/server\nExecStart=/opt/minecraft/server/start\nStandardInput=null\n[Install]\nWantedBy=multi-user.target' >> minecraft.service
+sudo systemctl daemon-reload
+sudo systemctl enable minecraft.service
+sudo systemctl start minecraft.service
+
+# End script
+```
+
 
 
 
