@@ -28,6 +28,17 @@ Once on the home page you will see a large orange button that says launch instan
    ```bash
    ssh -i /path/to/key/your-key.pem ec2-user@public-ip
    ```
-   You are going to want to change the path to the correct one to access your key file and make sure you change the key file name to the correct one. After that go to you ec2 instances which can be reached via the “Instance” section on the side option on the ec2 page. Click on it can then click on the minecraft server instance. In the top middle of the page you will find the public ip which will be put at the end of the ssh command.
+   You are going to want to change the path to the correct one to access your key file and make sure you change the key file name to    the correct one. After that go to you ec2 instances which can be reached via the “Instance” section on the side option on the ec2    page. Click on it can then click on the minecraft server instance. In the top middle of the page you will find the public ip         which will be put at the end of the ssh command.
+2. After this, we are going to be running a script to handle the setup of the server itself. To start, we are going to make a file 
+   called `setup-minecraft.sh` which can be done with the following command:
+
+```bash
+touch setup-minecraft.sh
+```
+3. Now that the file is made we now need to use a text editor to add the information that will allow the script to work. You are        going to enter ```bash
+   “vim setup-minecraft.sh” ```
+   Note that you don't have to use vim and instead use anyone you feel comfortable with.
+
+
 
 
