@@ -106,6 +106,8 @@ sudo systemctl start minecraft.service
 
 This tutorial was based on the article "Setting up a Minecraft Java server on Amazon EC2"(https://aws.amazon.com/ko/blogs/gametech/setting-up-a-minecraft-java-server-on-amazon-ec2/) by Mitul Ganger and Caleb Grode
 
+They do an amazing job laying out the steps and aslo have a detailed section useing the "user_data" field to have the instance run the script durning set up.
+
 
 
 
