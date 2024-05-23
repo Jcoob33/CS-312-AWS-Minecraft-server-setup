@@ -51,7 +51,7 @@
    ```
    Note that you don't have to use vim and instead use anyone you feel comfortable with.
    
-5. You are now going to add the script shown below with one change. You need to add the link to the .jar file that will allow the      server to work. This can be found at this website `​​https://mcversions.net/download/1.20.1`. Add that to the part of the script      where you see “MINECRAFTSERVERURL=”. Make sure that there is no space between the “=” sign when the url is added.
+5. You are now going to add the script shown below with one change. You need to add the link to the .jar file that will allow the      server to work. This can be found at this website (https://mcversions.net/download/1.20.1). Add that to the part of the script      where you see “MINECRAFTSERVERURL=”. Make sure that there is no space between the “=” sign when the url is added.
 ```bash
    #!/bin/bash
 
