@@ -24,8 +24,8 @@
 6. In the “Firewall (security group)” section, click the “Create security group” box. You are given the option to change the name      and also leave a brief description.
 
 7. Add two inbound rules that will allow connectivity:
-   - Rule 1: Leave “Type”, “Protocol”, and “Port Range” as is. Change the “Source type” to “Anywhere”. Add a description if desired.
-   - Rule 2: Click the “Add security group rule” at the bottom left side of the section. Set “Type” to Custom TCP, “Protocol” to       TCP, “Port Range” to 25565, and “Source type” to “Anywhere”. Leave a brief description indicating it allows Minecraft               connections.
+   - Rule 1: “Type” should be ssh, “Protocol” should be tcp, and “Port Range” set to 22, and set the “Source        type” to “Anywhere”. Add a description if desired.
+   - Rule 2: Click the “Add security group rule” at the bottom left side of the section. Set “Type” to Custom       TCP, “Protocol” to TCP, “Port Range” to 25565, and “Source type” to “Anywhere”. Leave a brief                    description indicating it allows Minecraft connections.
 
 8. Finally Scroll down to the “Configure storage” section where you are going to select 8GB for root volume EBS. Then launch the instance.
 
